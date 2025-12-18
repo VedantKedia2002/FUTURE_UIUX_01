@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu & Ordering Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Restaurant</h1>
+        <nav>
+            <button class="nav-btn active" data-category="all">All</button>
+            <button class="nav-btn" data-category="appetizers">Appetizers</button>
+            <button class="nav-btn" data-category="mains">Main Courses</button>
+            <button class="nav-btn" data-category="desserts">Desserts</button>
+            <button class="nav-btn" data-category="beverages">Beverages</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="menu">
+            <!-- Appetizers -->
+            <div class="menu-item" data-category="appetizers">
+                <img src="https://via.placeholder.com/200x150?text=Bruschetta" alt="Bruschetta">
+                <h3>Bruschetta</h3>
+                <p>Toasted bread topped with tomatoes, garlic, and basil.</p>
+                <span class="price">$8.99</span>
+                <button class="add-to-order">Add to Order</button>
+            </div>
+            <div class="menu-item" data-category="appetizers">
+                <img src="https://via.placeholder.com/200x150?text=Calamari" alt="Calamari">
+                <h3>Calamari Rings</h3>
+                <p>Crispy fried squid rings with marinara sauce.</p>
+                <span class="price">$10.99</span>
+                <button class="add-to-order">Add to Order</button>
+            </div>
+
+            <!-- Main Courses -->
+            <div class="menu-item" data-category="mains">
+                <img src="https://via.placeholder.com/200x150?text=Grilled+Salmon" alt="Grilled Salmon">
+                <h3>Grilled Salmon</h3>
+                <p>Fresh salmon fillet grilled to perfection with herbs.</p>
+                <span class="price">$18.99</span>
+                <button class="add-to-order">Add to Order</button>
+            </div>
+            <div class="menu-item" data-category="mains">
+                <img src="https://via.placeholder.com/200x150?text=Steak" alt="Steak">
+                <h3>Ribeye Steak</h3>
+                <p>Juicy ribeye steak with mashed potatoes and veggies.</p>
+                <span class="price">$24.99</span>
+                <button class="add-to-order">Add to Order</button>
+            </div>
+
+            <!-- Desserts -->
+            <div class="menu-item" data-category="desserts">
+                <img src="https://via.placeholder.com/200x150?text=Tiramisu" alt="Tiramisu">
+                <h3>Tiramisu</h3>
+                <p>Classic Italian dessert with coffee-soaked ladyfingers.</p>
+                <span class="price">$6.99</span>
+                <button class="add-to-order">Add to Order</button>
+            </div>
+            <div class="menu-item" data-category="desserts">
+                <img src="https://via.placeholder.com/200x150?text=Cheesecake" alt="Cheesecake">
+                <h3>Cheesecake</h3>
+                <p>Creamy cheesecake with berry topping.</p>
+                <span class="price">$7.99</span>
+                <button class="add-to-order">Add to Order</button>
+            </div>
+
+            <!-- Beverages -->
+            <div class="menu-item" data-category="beverages">
+                <img src="https://via.placeholder.com/200x150?text=Coffee" alt="Coffee">
+                <h3>Coffee</h3>
+                <p>Freshly brewed coffee.</p>
+                <span class="price">$3.99</span>
+                <button class="add-to-order">Add to Order</button>
+            </div>
+            <div class="menu-item" data-category="beverages">
+                <img src="https://via.placeholder.com/200x150?text=Soda" alt="Soda">
+                <h3>Soda</h3>
+                <p>Choice of cola, lemon-lime, or orange.</p>
+                <span class="price">$2.99</span>
+                <button class="add-to-order">Add to Order</button>
+            </div>
+        </section>
+
+        <aside id="order-summary">
+            <h2>Your Order</h2>
+            <div id="order-items">
+                <!-- Order items will be added here dynamically -->
+            </div>
+            <div id="order-type">
+                <label>
+                    <input type="radio" name="order-type" value="dine-in" checked> Dine-in
+                </label>
+                <label>
+                    <input type="radio" name="order-type" value="takeaway"> Takeaway
+                </label>
+            </div>
+            <div id="total">
+                <p>Total: $<span id="total-price">0.00</span></p>
+            </div>
+            <button id="place-order">Place Order</button>
+        </aside>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
